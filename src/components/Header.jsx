@@ -20,7 +20,7 @@ export function Header(props) {
                 <nav
                     className={`z-20 flex flex-row items-center justify-between bg-white px-14 py-6 shadow-emerald-600 duration-200 dark:shadow-red-600 ${
                         isMenuOpen ? "shadow-none" : "shadow-sm"
-                    } ${theme ? "dark" : ""} dark:bg-scuro dark:text-[#e8e6e3]`}
+                    } ${theme ? "dark" : ""} dark:bg-scuro dark:text-chiaro`}
                 >
                     <div className="roboto-mono text-[30px]"> MyPortfolio </div>
                     <div
@@ -59,12 +59,14 @@ export function Header(props) {
                     ) : (
                         <Menu
                             className="cursor-pointer md:hidden"
-                            onClick={() => setIsMenuOpen((x) => !x)}
+                            onClick={() => {
+                                setIsMenuOpen((x) => !x);
+                            }}
                         />
                     )}
                     <div
                         onClick={() => dispatch(switchTheme())}
-                        className="cursor-pointer items-center rounded-md bg-amber-50 p-1.5 shadow-sm hover:bg-amber-200"
+                        className="dark:hover:bg-chiaro hidden cursor-pointer items-center rounded-md bg-amber-50 p-1.5 shadow-sm hover:bg-amber-200 md:block dark:bg-neutral-600 dark:hover:text-neutral-600"
                     >
                         {theme ? <Moon /> : <Sun />}
                     </div>
