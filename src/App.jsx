@@ -10,7 +10,7 @@ import "./i18n.js";
 function App() {
     const { t, i18n } = useTranslation();
     useEffect(() => {
-        i18n.changeLanguage(navigator.language);
+        i18n.changeLanguage("en");
     }, []);
 
     return (

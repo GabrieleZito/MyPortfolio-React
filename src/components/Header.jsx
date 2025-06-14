@@ -15,6 +15,9 @@ export function Header(props) {
     const language = i18n.language;
     const theme = useSelector((state) => state.theme.value);
     const dispatch = useDispatch();
+    const languages = ["en", "it"];
+    const [isLangHidden, setIsLangHidden] = useState(false);
+
     return (
         <>
             <header>
@@ -58,12 +61,42 @@ export function Header(props) {
                             >
                                 {theme ? <Moon /> : <Sun />}
                             </div>
-                            <div className="flex h-[36px] w-[36px] items-center justify-center rounded-md bg-white shadow-sm dark:bg-neutral-600">
+                            <div
+                                onClick={() => {
+                                    setIsLangHidden((x) => !x);
+                                }}
+                                className="flex h-[36px] w-[36px] items-center justify-center rounded-md bg-white shadow-sm dark:bg-neutral-600"
+                            >
                                 <img
                                     className=""
-                                    src={`https://flagcdn.com/w20/${language}.png`}
+                                    src={`https://flagcdn.com/w20/${language == "en" ? "gb" : language}.png`}
                                     alt=""
                                 />
+                                <div
+                                    onClick={() => {
+                                        setIsLangHidden((x) => !x);
+                                    }}
+                                    className={`absolute mt-[80px] ${!isLangHidden ? "hidden" : ""} `}
+                                >
+                                    {languages
+                                        .filter((l) => l != language)
+                                        .map((ll) => (
+                                            <div
+                                                key={ll}
+                                                onClick={() => {
+                                                    setIsLangHidden((l) => !l);
+                                                    i18n.changeLanguage(ll);
+                                                }}
+                                                className="dark:bg-scuro flex h-[36px] w-[36px] items-center justify-center rounded-sm bg-white shadow-sm"
+                                            >
+                                                <img
+                                                    className=""
+                                                    src={`https://flagcdn.com/w20/${ll == "en" ? "gb" : ll}.png`}
+                                                    alt=""
+                                                />
+                                            </div>
+                                        ))}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -87,12 +120,44 @@ export function Header(props) {
                         >
                             {theme ? <Moon /> : <Sun />}
                         </div>
-                        <div className="flex h-[36px] w-[36px] items-center justify-center rounded-md bg-white shadow-sm dark:bg-neutral-600">
+                        <div
+                            onClick={() => {
+                                setIsLangHidden((x) => !x);
+                            }}
+                            className="flex h-[36px] w-[36px] items-center justify-center rounded-md bg-white shadow-sm dark:bg-neutral-600"
+                        >
                             <img
                                 className=""
-                                src={`https://flagcdn.com/w20/${language}.png`}
+                                src={`https://flagcdn.com/w20/${language == "en" ? "gb" : language}.png`}
                                 alt=""
                             />
+
+                            <div
+                                onClick={() => {
+                                    setIsLangHidden((x) => !x);
+                                }}
+                                className={`absolute mt-[80px] ${!isLangHidden ? "hidden" : ""} `}
+                            >
+                                {languages
+                                    .filter((l) => l != language)
+                                    .map((ll) => (
+                                        <div
+                                            key={ll}
+                                            onClick={() => {
+                                                setIsLangHidden((l) => !l);
+                                                i18n.changeLanguage(ll);
+                                            }}
+                                            className="dark:bg-scuro flex h-[36px] w-[36px] items-center justify-center rounded-sm bg-white shadow-sm"
+                                        >
+                                            {console.log(ll)}
+                                            <img
+                                                className=""
+                                                src={`https://flagcdn.com/w20/${ll == "en" ? "gb" : ll}.png`}
+                                                alt=""
+                                            />
+                                        </div>
+                                    ))}
+                            </div>
                         </div>
                     </div>
                 </nav>
