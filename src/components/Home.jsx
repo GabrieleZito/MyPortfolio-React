@@ -13,7 +13,7 @@ export function Home(props) {
     return (
         <>
             <div
-                className={`${theme ? "dark" : ""} dark:bg-scuro absolute -z-10 h-full max-w-screen duration-200 md:w-full`}
+                className={`${theme ? "dark" : ""} dark:bg-scuro absolute left-0 -z-10 h-full max-w-screen duration-200 md:w-full`}
             >
                 <div
                     className={`dark:bg-scuro relative mt-[200px] flex flex-col justify-center gap-10 md:flex-row`}
@@ -55,17 +55,17 @@ export function Home(props) {
                                 key={p.id}
                                 className="dark:text-chiaro flex flex-col rounded-lg px-4 py-4 text-emerald-700 shadow-sm md:max-w-xl dark:bg-neutral-800"
                             >
-                                <div className="flex flex-col items-center md:flex-row">
+                                <div className="flex max-w-screen flex-col items-center md:flex-row">
                                     <img
-                                        className="h-96 w-full object-cover md:h-auto md:w-48"
+                                        className="h-96 object-cover md:h-auto md:w-48"
                                         src={"/images/projects/" + p.image}
                                         alt=""
                                     />
-                                    <div className="flex w-max flex-col justify-between p-4 leading-normal">
-                                        <h5 className="mb-2 text-2xl font-bold tracking-tight">
+                                    <div className="flex flex-col justify-between p-4 leading-normal">
+                                        <h5 className="mb-2 font-bold tracking-tight md:text-2xl">
                                             {p.name}
                                         </h5>
-                                        <p className="mb-3 truncate font-normal whitespace-pre-line">
+                                        <p className="mb-3 font-normal">
                                             {p[`description_${language}`]}
                                         </p>
                                     </div>
