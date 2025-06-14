@@ -13,7 +13,7 @@ export function Home(props) {
     return (
         <>
             <div
-                className={`${theme ? "dark" : ""} dark:bg-scuro absolute -z-10 h-full w-full duration-200`}
+                className={`${theme ? "dark" : ""} dark:bg-scuro absolute -z-10 h-full max-w-screen duration-200 md:w-full`}
             >
                 <div
                     className={`dark:bg-scuro relative mt-[200px] flex flex-col justify-center gap-10 md:flex-row`}

@@ -27,7 +27,7 @@ export function Header(props) {
                     <div
                         className={`absolute left-0 flex w-full flex-col md:static md:w-fit md:flex-row ${
                             isMenuOpen ? "top-[95px]" : "top-[-100%]"
-                        } roboto-mono z-10 items-center gap-12 text-[20px] shadow-[0px_2px_2px_-1px_rgba(0,0,0,0.1)] shadow-emerald-600 duration-300 md:z-0 md:shadow-none dark:shadow-red-600`}
+                        } roboto-mono dark:bg-scuro z-10 items-center gap-12 bg-white pb-3 text-[20px] shadow-[0px_2px_2px_-1px_rgba(0,0,0,0.1)] shadow-emerald-600 duration-300 md:z-0 md:pb-0 md:shadow-none dark:shadow-red-600`}
                     >
                         <a
                             href="https://github.com/GabrieleZito"
@@ -51,6 +51,21 @@ export function Header(props) {
                             />
                             <div>LinkedIn</div>
                         </a>
+                        <div className="dark:bg-scuro flex flex-row items-center gap-3 md:hidden">
+                            <div
+                                onClick={() => dispatch(switchTheme())}
+                                className="dark:hover:bg-chiaro cursor-pointer items-center rounded-md bg-amber-50 p-1.5 shadow-sm hover:bg-amber-200 dark:bg-neutral-600 dark:hover:text-neutral-600"
+                            >
+                                {theme ? <Moon /> : <Sun />}
+                            </div>
+                            <div className="flex h-[36px] w-[36px] items-center justify-center rounded-md bg-white shadow-sm dark:bg-neutral-600">
+                                <img
+                                    className=""
+                                    src={`https://flagcdn.com/w20/${language}.png`}
+                                    alt=""
+                                />
+                            </div>
+                        </div>
                     </div>
                     {isMenuOpen ? (
                         <X
@@ -65,14 +80,14 @@ export function Header(props) {
                             }}
                         />
                     )}
-                    <div className="flex flex-row items-center gap-3">
+                    <div className="hidden flex-row items-center gap-3 md:flex">
                         <div
                             onClick={() => dispatch(switchTheme())}
-                            className="dark:hover:bg-chiaro hidden cursor-pointer items-center rounded-md bg-amber-50 p-1.5 shadow-sm hover:bg-amber-200 md:block dark:bg-neutral-600 dark:hover:text-neutral-600"
+                            className="dark:hover:bg-chiaro cursor-pointer items-center rounded-md bg-amber-50 p-1.5 shadow-sm hover:bg-amber-200 dark:bg-neutral-600 dark:hover:text-neutral-600"
                         >
                             {theme ? <Moon /> : <Sun />}
                         </div>
-                        <div className="flex h-[36px] w-[36px] items-center justify-center rounded-md bg-white shadow-sm">
+                        <div className="flex h-[36px] w-[36px] items-center justify-center rounded-md bg-white shadow-sm dark:bg-neutral-600">
                             <img
                                 className=""
                                 src={`https://flagcdn.com/w20/${language}.png`}
