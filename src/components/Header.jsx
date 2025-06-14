@@ -72,7 +72,7 @@ export function Header(props) {
                         >
                             {theme ? <Moon /> : <Sun />}
                         </div>
-                        <div onClick={} className="flex h-[36px] w-[36px] items-center justify-center rounded-md bg-white shadow-sm">
+                        <div className="flex h-[36px] w-[36px] items-center justify-center rounded-md bg-white shadow-sm">
                             <img
                                 className=""
                                 src={`https://flagcdn.com/w20/${language}.png`}
