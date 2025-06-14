@@ -3,7 +3,8 @@
         {
             "id": 1,
             "name": "FantaLoL - Front End",
-            "description": "Sito web per giocare al fantacalcio basato su League of Legends.",
+            "description_it": "Sito web per giocare al fantacalcio basato su League of Legends.",
+            "description_en": "Website to play fantasy football based on League of Legends",
             "site_link": "https://fanta-lol.vercel.app/",
             "github_link": "https://github.com/GabrieleZito/FantaLOL",
             "tags": ["React", "Tailwind"],
@@ -13,7 +14,8 @@
         {
             "id": 2,
             "name": "FantaLoL - Back End",
-            "description": "Back End for the FantaLoL site",
+            "description_it": "Back End per il sito di FantaLoL",
+            "description_en": "Back End for the FantaLoL site",
             "site_link": "",
             "github_link": "https://github.com/GabrieleZito/FantaLOL-Server",
             "tags": ["NodeJS", "Express", "SQL", "Socket.io"],
@@ -23,9 +25,10 @@
         {
             "id": 3,
             "name": "MyPortfolio",
-            "description": "This site I guess",
-            "site_link": "",
-            "github_link": "",
+            "description_it": "Questo sito :)",
+            "description_en": "This site I guess",
+            "site_link": "https://gabrieles-portfolio.vercel.app/",
+            "github_link": "https://github.com/GabrieleZito/MyPortfolio-React",
             "tags": ["React", "Tailwind", "Redux"],
             "last_modified": "",
             "image": "myportfolio-light.png"

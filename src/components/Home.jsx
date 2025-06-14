@@ -3,9 +3,12 @@ import { useSelector } from "react-redux";
 import propic from "../assets/images/propic.png";
 import json from "../projects.json";
 import { Github, Globe } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export function Home(props) {
     const theme = useSelector((state) => state.theme.value);
+    const { t, i18n } = useTranslation();
+    const language = i18n.language;
 
     return (
         <>
@@ -32,10 +35,7 @@ export function Home(props) {
                                 Palermo
                             </div>
                             <div className="mt-2 px-6 text-center text-sm font-light">
-                                <p>
-                                    Full Stack Developer, avid reader. Love to
-                                    build things and travel
-                                </p>
+                                <p>{t("proDesc")}</p>
                             </div>
                             <hr className="mt-8" />
                             <div className="flex justify-center p-4">
@@ -66,15 +66,22 @@ export function Home(props) {
                                             {p.name}
                                         </h5>
                                         <p className="mb-3 truncate font-normal whitespace-pre-line">
-                                            {p.description}
+                                            {p[`description_${language}`]}
                                         </p>
                                     </div>
                                 </div>
                                 <div className="mt-2 flex justify-between">
                                     <div className="flex flex-row">
-                                        <a href={p.github_link} target="_blank">
-                                            <Github />
-                                        </a>
+                                        {p.github_link ? (
+                                            <a
+                                                href={p.github_link}
+                                                target="_blank"
+                                            >
+                                                <Github />
+                                            </a>
+                                        ) : (
+                                            ""
+                                        )}
                                         {p.site_link ? (
                                             <a
                                                 href={p.site_link}

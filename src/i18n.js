@@ -3,10 +3,15 @@ import { initReactI18next } from "react-i18next";
 
 const resources = {
     it: {
-        translation: {},
+        translation: {
+            proDesc:
+                "Full Stack Developer. Mi piace costruire cose e viaggiare",
+        },
     },
     en: {
-        translation: {},
+        translation: {
+            proDesc: "Full Stack Developer. Love to build things and travel",
+        },
     },
 };
 
