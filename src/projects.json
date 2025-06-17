@@ -32,6 +32,28 @@
             "tags": ["React", "Tailwind", "Redux"],
             "last_modified": "",
             "image": "myportfolio-light.png"
+        },
+        {
+            "id": 4,
+            "name": "Car-Sharing",
+            "description_it": "Versione base di una app di car-sharing con rilevamento della posizione con GPS",
+            "description_en": "Basic version of a car-sharing app with GPS functionalities",
+            "site_link": "",
+            "github_link": "https://github.com/GabrieleZito/Zimp-Car-Sharing",
+            "tags": ["Kotlin"],
+            "last_modified": "",
+            "image": "no-image.png"
+        },
+        {
+            "id": 5,
+            "name": "PharmaLat",
+            "description_it": "Sistema di gestione dell'inventario per una farmacia",
+            "description_en": "Inventory management system for a pharmacy",
+            "site_link": "",
+            "github_link": "https://github.com/PharmaLat",
+            "tags": ["Java", "Java Swing", "SQL"],
+            "last_modified": "",
+            "image": "no-image.png"
         }
     ]
 }
