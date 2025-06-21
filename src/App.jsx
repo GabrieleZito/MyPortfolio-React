@@ -6,6 +6,7 @@ import { Header } from "./components/Header";
 import { Home } from "./components/Home";
 import { useTranslation } from "react-i18next";
 import "./i18n.js";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
     const { t, i18n } = useTranslation();
@@ -22,6 +23,7 @@ function App() {
                     </Route>
                 </Routes>
             </BrowserRouter>
+            <Analytics />
         </>
     );
 }
