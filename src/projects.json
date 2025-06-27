@@ -35,6 +35,17 @@
         },
         {
             "id": 4,
+            "name": "My Notes",
+            "description_it": "Prendi note sul browser, salvate nel local storage. Markdown compatibile",
+            "description_en": "Take your notes on the browser, saved on local storage. Compatible with Markdown",
+            "site_link": "https://my-notes-self-rho.vercel.app/",
+            "github_link": "https://github.com/GabrieleZito/my-notes",
+            "tags": ["React", "Tailwind", "Local Storage"],
+            "last_modified": "",
+            "image": "no-image.png"
+        },
+        {
+            "id": 5,
             "name": "Car-Sharing",
             "description_it": "Versione base di una app di car-sharing con rilevamento della posizione con GPS",
             "description_en": "Basic version of a car-sharing app with GPS functionalities",
@@ -45,7 +56,7 @@
             "image": "no-image.png"
         },
         {
-            "id": 5,
+            "id": 6,
             "name": "PharmaLat",
             "description_it": "Sistema di gestione dell'inventario per una farmacia",
             "description_en": "Inventory management system for a pharmacy",
