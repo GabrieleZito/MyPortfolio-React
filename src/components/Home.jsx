@@ -4,6 +4,7 @@ import propic from "../assets/images/propic.png";
 import json from "../projects.json";
 import { Github, Globe } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import instagram from "../assets/images/Instagram_Glyph_Gradient.png";
 
 export function Home(props) {
     const theme = useSelector((state) => state.theme.value);
@@ -15,36 +16,24 @@ export function Home(props) {
             <div
                 className={`${theme ? "dark" : ""} dark:bg-scuro absolute left-0 -z-10 h-full max-w-screen duration-200 md:w-full`}
             >
-                <div
-                    className={`dark:bg-scuro relative mt-[200px] flex flex-col justify-center gap-10 md:flex-row`}
-                >
+                <div className={`dark:bg-scuro relative mt-[200px] flex flex-col justify-center gap-10 md:flex-row`}>
                     <div className="flex flex-row justify-center font-sans">
                         <div className="dark:text-chiaro mx-auto h-fit w-96 bg-white shadow-2xl hover:shadow dark:bg-neutral-800">
-                            <img
-                                className="mx-auto -mt-20 w-32 border-8 border-white dark:border-black"
-                                src={propic}
-                                alt=""
-                            />
-                            <div className="mt-2 text-center text-3xl font-medium">
-                                Gabriele Zito
-                            </div>
-                            <div className="mt-2 text-center text-sm font-light">
-                                @devpenzil
-                            </div>
-                            <div className="text-center text-lg font-normal">
-                                Palermo
-                            </div>
+                            <img className="mx-auto -mt-20 w-32 border-8 border-white dark:border-black" src={propic} alt="" />
+                            <div className="mt-2 text-center text-3xl font-medium">Gabriele Zito</div>
+                            <div className="text-center text-lg font-normal">Palermo</div>
                             <div className="mt-2 px-6 text-center text-sm font-light">
                                 <p>{t("proDesc")}</p>
+                            </div>
+                            <div className="mt-2 justify-center text-center text-sm font-light">
+                                <a href="https://www.instagram.com/gabrielezyto/">
+                                    <img src={instagram} className="mx-auto w-6" />
+                                </a>
                             </div>
                             <hr className="mt-8" />
                             <div className="flex justify-center p-4">
                                 <div className="w-1/2 text-center">
-                                    <span className="font-bold">
-                                        {" "}
-                                        {json.projects.length}{" "}
-                                    </span>{" "}
-                                    Projects
+                                    <span className="font-bold"> {json.projects.length} </span> Projects
                                 </div>
                             </div>
                         </div>
@@ -62,31 +51,21 @@ export function Home(props) {
                                         alt=""
                                     />
                                     <div className="flex flex-col justify-between p-4 leading-normal">
-                                        <h5 className="mb-2 font-bold tracking-tight md:text-2xl">
-                                            {p.name}
-                                        </h5>
-                                        <p className="mb-3 font-normal">
-                                            {p[`description_${language}`]}
-                                        </p>
+                                        <h5 className="mb-2 font-bold tracking-tight md:text-2xl">{p.name}</h5>
+                                        <p className="mb-3 font-normal">{p[`description_${language}`]}</p>
                                     </div>
                                 </div>
                                 <div className="mt-2 flex justify-between">
                                     <div className="flex flex-row">
                                         {p.github_link ? (
-                                            <a
-                                                href={p.github_link}
-                                                target="_blank"
-                                            >
+                                            <a href={p.github_link} target="_blank">
                                                 <Github />
                                             </a>
                                         ) : (
                                             ""
                                         )}
                                         {p.site_link ? (
-                                            <a
-                                                href={p.site_link}
-                                                target="_blank"
-                                            >
+                                            <a href={p.site_link} target="_blank">
                                                 <Globe />
                                             </a>
                                         ) : (

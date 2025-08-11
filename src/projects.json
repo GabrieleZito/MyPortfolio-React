@@ -14,8 +14,8 @@
         {
             "id": 1,
             "name": "FantaLoL - Front End",
-            "description_it": "Sito web per giocare al fantacalcio basato su League of Legends.",
-            "description_en": "Website to play fantasy football based on League of Legends",
+            "description_it": "Sito web per giocare al fantacalcio basato su League of Legends. (Non mantenuto)",
+            "description_en": "Website to play fantasy football based on League of Legends. (Not maintained)",
             "site_link": "https://fanta-lol.vercel.app/",
             "github_link": "https://github.com/GabrieleZito/FantaLOL",
             "tags": ["React", "Tailwind"],
