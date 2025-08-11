@@ -1,6 +1,17 @@
 {
     "projects": [
         {
+            "id": 6,
+            "name": "Freeagle",
+            "description_it": "App iOS sviluppata per l'Apple Foundation Program",
+            "description_en": "iOS app developed for the Apple Foundation Program",
+            "site_link": "",
+            "github_link": "https://github.com/GabrieleZito/Freeagle",
+            "last_modified": "2025-07-30",
+            "image": "Freeagle.png",
+            "tags": ["iOS", "Swift", "SwiftUI"]
+        },
+        {
             "id": 1,
             "name": "FantaLoL - Front End",
             "description_it": "Sito web per giocare al fantacalcio basato su League of Legends.",
